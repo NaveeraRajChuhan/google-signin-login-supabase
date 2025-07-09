@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Supabase Auth - Google SignIn</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Login / Signup</h2>
+
+    <label>Email:</label>
+    <input type="email" id="signup-email" placeholder="Enter your email" />
+
+    <label>Password:</label>
+    <input type="password" id="signup-password" placeholder="Enter your password" />
+
+    <button id="signupBtn">Sign Up</button>
+    <button id="loginBtn">Login</button>
+    <hr />
+    <button id="googleBtn">Sign in with Google</button>
+
+    <p id="message"></p>
+  </div>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  
+  <script src="app.js"></script>
+</body>
+</html>
