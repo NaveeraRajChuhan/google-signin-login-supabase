@@ -64,8 +64,12 @@ loginBtn.addEventListener("click", async () => {
 googleBtn.addEventListener("click", async () => {
   // ye supabase k dash bord ki link hay
   const { error } = await client.auth.signInWithOAuth({
-    provider: "google",
-  });
+		provider: 'google',
+		options: {
+			redirectTo: window.location.origin + '/post.html',
+			queryParams: { access_type: 'offline', prompt: 'consent' },
+		},
+	});
 
   if (error) {
     msg.textContent = "❌ Google Sign-In Error: " + error.message;
